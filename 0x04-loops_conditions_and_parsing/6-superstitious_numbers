@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Displays numbers from 1-20,display bad luck from china on 4th iteration,on 9th from Japan and on 17th from Italy
+counter=1
+while [ $counter -le 20 ]
+do 
+	if [ $counter -eq 4 ]
+	then
+		echo "bad luck from China"
+	elif [ $counter -eq 9 ]
+	then 
+		echo "bad luck from Japan"
+	elif [ $counter -eq 17 ]
+	then
+		echo "bad luck from Italy"
+	else
+		echo "$counter"
+	fi
+	((counter++))
+done
