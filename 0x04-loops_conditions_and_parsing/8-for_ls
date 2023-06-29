@@ -3,5 +3,5 @@
 content=$(ls -1)
 for file in $content
 do
-	echo "${file#*_}"
+	echo "${file#*-}"
 done
