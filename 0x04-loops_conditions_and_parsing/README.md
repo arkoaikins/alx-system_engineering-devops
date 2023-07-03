@@ -7,7 +7,7 @@ This is a bash scripting project done in my ALX Software engineering
 |   Project tasks(task 0 - task 14)  |
 
 ## What i learnt in this project(explained briefly)
-- In this project i learnt about Loops, conditions and parsing
+- In this project i learnt about Loops,conditions and parsing in Bash scripting
 - How to create SSH keys
   - Use the ssh-keygyen to open ssh key
 - What is the advantage of using #!/usr/bin/env bash over #!/bin/bash
@@ -50,6 +50,7 @@ Requirements:
 ![image](https://github.com/arkoaikins/alx-system_engineering-devops/assets/110135034/22afea8c-cbce-48eb-9582-93e124aecac0)
 - File: 2-while_best_school
 
+### 3.
 #Continue with the tasks🙁
 
 
