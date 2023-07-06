@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#nestat to provide the networ statistics
+#the option -l is to display listening sockets
+# and the -p to show the PID of the listening sockets
+netstat -l -p
