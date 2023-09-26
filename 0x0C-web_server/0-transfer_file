@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Script that transfers a file from our clients to a server
+
+
+#accepting parameter from the user
+get_para(){
+#first paremeter
+	file_path=$1
+#second parameter
+	server_ip=$2
+#third parameter
+	username=$3
+#fourth parameter
+	path_to_ssh_key=$4
+}
+get_para "$1" "$2" "$3" "$4"
+
+#check if user input parameters is up to 4
+if [ $# -lt 3 ];
+then
+	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+	exit 1
+fi
+
+#connecting to the server and transferring the file
+scp -o "StrictHostKeyChecking no" -i "$path_to_ssh_key" "$file_path" "$username@$server_ip:~/"
+
+#check if file transfer was sucessfull 
+if ! scp: Successful; 
+then
+	echo "Error transferring file!"
+    	exit 1
+
+fi
+
+# clean up and exit the function
+echo "Done!"
+exit 0
