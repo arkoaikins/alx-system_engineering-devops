@@ -26,11 +26,11 @@ fi
 scp -o "StrictHostKeyChecking no" -i "$path_to_ssh_key" "$file_path" "$username@$server_ip:~/"
 
 #check if file transfer was sucessfull 
-if ! scp: Successful; 
+if scp -o "StrictHostKeyChecking no" -i "$path_to_ssh_key" "$file_path" "$username@$server_ip:~/"; 
 then
-	echo "Error transferring file!"
-    	exit 1
-
+	echo "File has been transferred!"
+else
+	echo "Error transferring file!" 
 fi
 
 # clean up and exit the function
