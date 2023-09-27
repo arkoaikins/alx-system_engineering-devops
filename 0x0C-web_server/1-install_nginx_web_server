@@ -8,7 +8,7 @@ sudo apt-get update
 sudo apt-get -y install nginx
 
 # configure Nginx to listen on port 80
-ufw allow 'Nginx HTTP'
+sudo ufw allow 'Nginx HTTP'
 
 # set landing page
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
