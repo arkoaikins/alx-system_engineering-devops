@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Configuring  Nginx server to /redirect_me to another page.
+# The redirection is  "301 Moved Permanently"
+
+#update packages
+apt-get -y update
+
+#install nginx
+apt-get -y install nginx
+
+# configure Nginx to listen on port 80
+sudo ufw allow 'Nginx HTTP'
+
+# set landing page
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+#The 301 Moved Permanently redirection
+sed -i "/server_name _;/a \\\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
