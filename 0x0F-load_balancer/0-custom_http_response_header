@@ -19,10 +19,11 @@ config="server_name _;\n\trewrite ^\/redirect_me https://www.youtube.com/shorts/
 sudo sed -i "s/server_name _;/$config/" /etc/nginx/sites-enabled/default
 
 # Creating a 404 Custom error page
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
-config="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
-sudo sed -i "s/listen 80 default_server;/$config/" /etc/nginx/sites-enabled/default
-
+if ! grep -q "error_page 404 /404.html;" /etc/nginx/sites-enabled/default; then
+        echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+        config="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+        sudo sed -i "s/listen 80 default_server;/$config/" /etc/nginx/sites-enabled/default
+fi
 
 # create the custom HTTP response header
 sudo sed -i "/server_name _/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
