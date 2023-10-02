@@ -5,9 +5,6 @@
 #update packages
 sudo apt-get -y update
 
-#install nginx
-sudo apt-get -y install nginx
-
 # configure Nginx to listen on port 80
 sudo ufw allow 'Nginx HTTP'
 
