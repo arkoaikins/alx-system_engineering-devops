@@ -11,15 +11,11 @@ sudo apt-get install -y nginx
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # Configure a 301 Moved Permanently redirection
-config="server_name _;\n\trewrite ^/redirect_me https://www.youtube.com/shorts/VAWGCzD4jtk permanent;"
-sudo sed -i "s|server_name _;|$config|" /etc/nginx/sites-enabled/default
+sudo sed -i "/19i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-enabled/default
 
 # Create a 404 Custom error page if it doesn't exist
-if ! grep -q "error_page 404 /404.html;" /etc/nginx/sites-enabled/default; then
-    echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
-    config="listen 80 default_server;\n\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}"
-    sudo sed -i "/server_name _/a $config" /etc/nginx/sites-enabled/default
-fi
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/page_error_404.html
+sudo sed -i '37i error_page 404 /page_error_404.html;\nlocation = /page_error_404.html {\nroot /usr/share/nginx/html; \ninternal;\n}\n' /etc/nginx/sites-enabled/default
 
 # Test the Nginx configuration for errors
 sudo nginx -t
