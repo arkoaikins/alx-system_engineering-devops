@@ -4,14 +4,21 @@
 # Distribute requests using a roundrobin algorithm
 
 # update packages
-sudo apt-get -y update
+sudo apt-get update
 
 # install HAproxy
 sudo apt-get -y install haproxy
 
-
-#
-
+echo '
+frontend www-http
+        bind *:80
+        mode http
+        default_backend www-backend
+backend www-backend
+        balance roundrobin
+        server 264281-web-01 54.160.114.180
+        server 264281-web-02 54.90.14.86 
+' >> /etc/haproxy/haproxy.cfg
 
 # Restart the HAproxy
 sudo service haproxy restart
