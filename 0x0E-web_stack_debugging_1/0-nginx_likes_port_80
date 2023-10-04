@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Confugures nginx to listen to port 80
+
+# remove the  Nginx configuration file that had a bug in it
+rm /etc/nginx/sites-enabled/default
+
+# created a symbolic link to enable the configuration in the sites-enabled directory
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restart nginx service to effect the changes
+sudo service nginx restart
