@@ -6,6 +6,8 @@ SSL == Secure Socket Layer / TLS ==  Transport Layer Security
 
 [![video](https://github.com/arkoaikins/alx-higher_level_programming/assets/110135034/81eb6b40-5aa9-4d50-bad6-fa995531ffdc)](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/276/xCmOCgw.gif)
 
+https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/276/xCmOCgw.gif
+
 This project involves 3 tasks
 In this project,
 - I add SSL certificate to my network connections(on my load balancer serving two webservers)
