@@ -1,6 +1,7 @@
 #                         0x10.HTTPS SSL
 Devops -   SysAdmin   -Security
 ## Overview
+SSL == Secure Socket Layer / TLS ==  Transport Layer Security
 - what happens when you don't secure your website traffic 😂🤣
 https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/276/xCmOCgw.gif
 
