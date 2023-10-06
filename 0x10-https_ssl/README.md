@@ -30,6 +30,10 @@ Create a certificate using certbot and configure HAproxy to accept encrypted tra
 
 [Bash function](https://intranet.alxswe.com/rltoken/zPjZ7-eSSQsLFsGA16C1HQ)
 
+- Use this to add SSL certificate to your website
+
+[for installing Certbot](https://gbeminiyi.hashnode.dev/installing-certbot-in-your-haproxy-load-balancer-server)
+
 ### Requirements for the tasks
 - Used the vi editor
 - Bash scripts are executable
