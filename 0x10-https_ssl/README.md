@@ -5,8 +5,9 @@ SSL == Secure Socket Layer / TLS ==  Transport Layer Security
 
 This project involves 3 tasks
 In this project,
-- I add SSL certificate to my network connections(on my load balancer serving two webservers)
-- I use SSL encript the communication between web browsers and my web server
+- I add terminating SSL certificate to my Haproxyon  my lb-01 server(on my load balancer serving two webservers)
+- I enforce HTTPS traffic so that no unencrypted traffic is possible. 
+- And configure HAproxy to automatically redirect HTTP traffic to HTTPS.
 - so that posible hackers can not intercept any information
 
 ## Project details
