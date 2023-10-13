@@ -1,3 +1,1 @@
-0x07. Networking basics #0
-This is project that teaches about OSI model and all about nework
-FUll details to be added
+This directory contains system_engineering-devops projects covered in ALX/Holberton software engineering program
