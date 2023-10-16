@@ -8,7 +8,7 @@
    - 22 (SSH)
    - 443 (HTTPS SSL)
    - 80 (HTTP)
-- The ufw commands used have been shared in  my anwer file `0-block_all_incoming_traffic_but`
+- The ufw commands used have been shared in  my anwer file `0-block_all_incoming_traffic_but
 
 
 firewall rules!:
@@ -21,6 +21,9 @@ so you should unblock it immediately before logging out of your server.
 - Configured web-01 firewall to redirect port 8080/TCP to port 80 TCP
 - a copy of my ufw modified configuration file is share in the answer file `100-port_forwarding`
 
+Check sucess by running
+`netstat -lpn` to show if netsatat is listening  on port 8080
+`grep listen /etc/nginx/sites-enabled/default` to show wether nginx is still listening on port 8080
 
 ### some important resources
 [what is a firewall](https://www.wikiwand.com/en/Firewall_%28computing%29)
