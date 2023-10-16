@@ -1,7 +1,6 @@
-# Firewall
+# Firewall :page_with_curl: 0x13-firewall
 
-## In this project
-
+## In this project :bulb
 
 ### Task 1
 - Installed `ufw` firewall on my web-01 server
