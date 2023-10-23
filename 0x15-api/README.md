@@ -28,3 +28,42 @@ Requirements:
  Code is runned `python3 0-gather_data_from_an_API.py 2 
                  python3 0-gather_data_from_an_API.py 4
 		 python3 0-gather_data_from_an_API.py 4 | tr " " "S" | tr "\t" "T"`
+
+
+### Task 1
+From task 0,the python file is extended to export data in the CSV format
+Requirements:
+- Records all tasks that are owned by this employee
+- Format must be: "USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
+Code is runned `python3 1-export_to_CSV.py 2`
+then the file created is opened `cat 2.csv`
+
+
+### Task 2
+From task 0,the python file is extended to export data in JSON format
+Requirements:
+- Records all tasks that are owned by this employee
+- Format must be: { "USER_ID": [{"task": "TASK_TITLE", "completed":
+                  TASK_COMPLETED_STATUS, "username": "USERNAME"}, {"task": "TASK_TITLE", "completed":
+		  TASK_COMPLETED_STATUS, "username": "USERNAME"}, ... ]}
+
+Code is runned `python3 2-export_to_JSON.py 2`
+then the file created is opened `cat 2.json`
+
+### Task 3
+From task 0,the python file is extended to export data in JSON format
+ Requirements:
+ - Records all tasks from all employees
+ - Format must be: { "USER_ID": [ {"username": "USERNAME", "task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS}, {"username": "USERNAME", "task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS}, ... ], "USER_ID":
+ [ {"username": "USERNAME", "task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS},
+ {"username": "USERNAME", "task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS}, ... ]}
+
+Code is runned `python3 3-dictionary_of_list_of_dictionaries.py`
+The the file created is opened `cat todo_all_employees.json`
+
+
+
+
+
+
+
