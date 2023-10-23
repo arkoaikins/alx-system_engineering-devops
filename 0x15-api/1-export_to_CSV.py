@@ -21,14 +21,14 @@ if __name__ == "__main__":
     # HTTP requests to the API via the URLS to get employee tasks and name
     # and parsing the JSON response
     employee_todo = (s.get(emp_tasks)).json()
-    employeeName = (s.get(emp_name)).json()['name']
+    employeeName = (s.get(emp_name)).json()['username']
 
     # check total tasks and count completed tasks
     for progress in employee_todo:
         if progress['completed']:
             task_done = task_done + 1
 
-    # export data is CSV format
+    # create filename
     csv_file = user_id + '.csv'
 
     with open(csv_file, "w", newline='') as csvfile:
