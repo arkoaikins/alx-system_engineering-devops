@@ -4,8 +4,8 @@ Script that uses REST API to return information about an
 employee's TODO list progress
 """
 import json
-import sys
 from requests import Session
+import sys
 
 if __name__ == "__main__":
 
