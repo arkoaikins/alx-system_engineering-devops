@@ -38,5 +38,5 @@ def count_words(subreddit, word_list, kwargs={}, after=None):
                            v in sorted(kwargs.items(),
                                        key=lambda item: item[1])}
             [print("{}: {}".format(k, v)) for k, v in sorted_dict.items()]
-    elif data.status_code == 404:
+    else:
         return None
