@@ -7,7 +7,9 @@ import requests
 
 
 def top_ten(subreddit):
-    """function that returns titles of first 10 hot posts in a subreddit"""
+    """function that returns titles of first 10 hot posts in a
+    subreddit
+    """
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {"User-Agent": "vagratn_ubuntu"}
 
@@ -18,4 +20,4 @@ def top_ten(subreddit):
         for hot_post in post:
             print(hot_post.get('data').get('title'))
     elif response.status_code == 404:
-        print(None)
+        print("None")
