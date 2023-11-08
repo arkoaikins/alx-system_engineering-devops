@@ -20,10 +20,11 @@ fix it and then automate it using Puppet (instead of using Bash as you were prev
 
 HINTS
 - `strace` can attach to a current running process
-- You can use `tmux` to run `strace` in one window and `curl` in another one
+- You can use [tmux](https://intranet.alxswe.com/rltoken/UsSRoxIYdq0l0QUIuDNnSw) to run [strace](https://intranet.alxswe.com/rltoken/ueMevAif95DjyW2sqVCMoA) in one window and `curl` in another one
 Requirements:
   - Your `0-strace_is_your_friend.pp` file must contain Puppet code
   - You can use whatever Puppet resource type you want for you fix
 
 Filename:`0-strace_is_your_friend.pp`
+
 how to run `curl -sI 127.0.0.1`, `puppet apply 0-strace_is_your_friend.pp`, `curl -s 127.0.0.1:80 | grep Holberton`
