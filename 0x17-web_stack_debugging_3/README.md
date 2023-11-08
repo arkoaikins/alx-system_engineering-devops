@@ -28,3 +28,7 @@ Requirements:
 Filename:`0-strace_is_your_friend.pp`
 
 how to run `curl -sI 127.0.0.1`, `puppet apply 0-strace_is_your_friend.pp`, `curl -s 127.0.0.1:80 | grep Holberton`
+
+### RESOURCES
+[Web Server](https://intranet.alxswe.com/concepts/17)
+[Web stack debugging](https://intranet.alxswe.com/concepts/68)
