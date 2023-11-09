@@ -37,4 +37,38 @@ be CPU,memory,disk or network overload)
 [Nginx logging and monitoring](https://intranet.alxswe.com/rltoken/V3GsrDcMHPdgrizShj4RCg)
 
 ### Task 0
+Set up a data Datadog account and install the Datadog agent unto your server
 
+![image](https://github.com/arkoaikins/alx-system_engineering-devops/assets/110135034/3bc66463-f421-4a75-9d9e-aa2da2191ab0)
+
+Requirements
+- Sign up for Datadog - Please make sure you are using the US website of [Datadog](https://app.datadoghq.com)
+- Use the US1 region
+- Install `datadog-agent` on `web-01`
+- Create an `application key`
+- Server `web-01` should be visible in Datadog under the hostname `XX-web-01`
+
+[helped to solve task](https://youtu.be/ZtDyQUkqRMs)
+
+
+### Task 1
+Among the litany of data your monitoring service can report to you are system metrics.You can use these metrics to
+determine statistics such as read/write per second,which can help your company determine if/how they should scale.
+Set up monitors within datadog
+
+![image](https://github.com/arkoaikins/alx-system_engineering-devops/assets/110135034/a1d67f64-d493-4851-8b98-98fbb3ab1370)
+
+Requirements
+- Set up a monitor that checks the number of read requests issued to the device per second.
+- Set up a monitor that checks the number of write requests issued to the device per second.
+
+Read about the various system metrics that you can monitor here. [System Check](https://intranet.alxswe.com/rltoken/4RPOEVDTqKXuvyU4Gkj2Bw)
+- for read  : avg:system.io.r_s{*}
+- for wirite : avg:system.io.w_s{*}
+
+### Task 2
+Now create a dashboard with different metrics displayed in order to get a few different visualizations
+- Create a new `dashboard`
+- Add at least 4 `widgets` to your dashboard.
+
+[help here](https://youtu.be/fR9sd5V6pUE)
