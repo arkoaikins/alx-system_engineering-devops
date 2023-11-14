@@ -4,8 +4,9 @@
 
 ## In this project :bulb:
 
-I tested how well our web server setup featuring NGINX is doing under pressure 
-
+- I tested how well our web server setup featuring NGINX is doing under pressure
+- But it was not doing so well,since some requests failed
+- So i used a puppet code to improve its performance
 ## Requirements
 - Puppet manifests must pass puppet-lint version 2.1.1 without any errors
 - Puppet manifests must run without error
